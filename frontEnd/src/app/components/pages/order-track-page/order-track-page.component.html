@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="contant" *ngIf="order">
+        <H1>Order#{{order.id}}</H1>
+        <div class="details">
+            <div>
+                <strong>
+                   Date 
+                </strong>
+
+                {{order.createdAt | date : 'mediam'}}
+            </div>
+            <div>
+                <strong>
+                   Name 
+                </strong>
+
+                {{order.name }}
+            </div>
+            <div>
+                <strong>
+                   Address 
+                </strong>
+
+                {{order.address}}
+            </div>
+            <div>
+                <strong>
+                   Status 
+                </strong>
+
+                {{order.status }}
+            </div>
+            <div *ngIf="order.paymentId"> 
+                <strong>
+                   paymentId 
+                </strong>
+
+                {{order.paymentId }}
+            </div>
+            
+        </div>
+        <order-item-list [order]="order"></order-item-list>
+       
+
+    </div>
+    <div>
+        <app-title title="Shippping Address"></app-title>
+        <app-map [order]="order" [readonly]="true"></app-map>
+    </div>
+</div>
