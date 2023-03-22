@@ -1,7 +1,9 @@
+
+
 import mongoose from 'mongoose'
 
-export const DbConnect = async() => {
-   return await mongoose.connect(process.env.dBlink!).then(()=>{
+ const DbConnect = async() => {
+   return await mongoose.connect(process.env.URIDB!).then(()=>{
     console.log("dataBase Work");
     
    }).catch((err)=>{
@@ -9,3 +11,6 @@ export const DbConnect = async() => {
     
    })
 }
+
+
+export default DbConnect

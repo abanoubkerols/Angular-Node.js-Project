@@ -1,8 +1,10 @@
+import dotenv from 'dotenv'
+dotenv.config({path : "./../.env"})
 import express from 'express'
 import cors from 'cors'
-import dotenv from 'dotenv'
-import { DbConnect } from './config/DB'
-dotenv.config()
+
+import  DbConnect  from './config/DB'
+DbConnect()
 
 
 
@@ -30,9 +32,9 @@ app.use('/api/orders' , orderRouter)
 
 
 
-DbConnect()
 
-let port = 3000
+
+let port = 8000
 
 app.listen(port, () => {
     console.log("our app is work");
