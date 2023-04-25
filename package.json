@@ -1,0 +1,9 @@
+{
+    "name": "foodMine",
+    "version": "1.0.0",
+    "scripts": {
+        "start": "cd backend/built && node app.js ",
+        "prebuild":"cd backend && npm run build",
+        "build":"cd frontEnd && npm run build"
+    }
+}
