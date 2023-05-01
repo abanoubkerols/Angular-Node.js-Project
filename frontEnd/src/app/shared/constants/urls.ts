@@ -1,5 +1,5 @@
 import { environment } from './../../../environments/environment';
-environment
+
 
 
 const BASE_URL =  environment.production? '': 'http://localhost:3000'
