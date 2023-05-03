@@ -34,10 +34,10 @@ app.use('/api/orders', orderRouter)
 
 app.use(express.static('public'))
 app.get('*', (req, res) => {
-  res.sendFile(path.join(__dirname + '/public/index.html'))
+  res.sendFile(path.join(__dirname , 'public' , 'index.html'))
 })
 
-let port = process.env.Port|| 8000
+let port = process.env.Port|| 3000
 
 app.listen(port, () => {
   console.log("our app is work");
